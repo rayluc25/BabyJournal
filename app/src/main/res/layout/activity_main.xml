@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activity.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <Button
+            android:id="@+id/view_journal"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/view_journal"
+            android:focusable="true"
+            android:nextFocusDown="@+id/new_feed"
+            android:onClick="toJournalActivity"
+            android:text="@string/view_journal" />
+
+        <Button
+            android:id="@+id/new_feed"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_journal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/new_feed"
+            android:focusable="true"
+            android:nextFocusDown="@+id/new_nap"
+            android:nextFocusUp="@id/view_journal"
+            android:onClick="toFeedActivity"
+            android:text="@string/new_feed" />
+
+        <Button
+            android:id="@+id/new_nap"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_feed"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/new_nap"
+            android:nextFocusDown="@+id/adView"
+            android:nextFocusUp="@id/new_feed"
+            android:onClick="toNapActivity"
+            android:text="@string/new_nap" />
+
+        <FrameLayout
+            android:id="@+id/ad_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/ad"
+                android:focusable="true"
+                android:nextFocusUp="@id/new_nap"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

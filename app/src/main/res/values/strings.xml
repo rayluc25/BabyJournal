@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BabyJournal</string>
+    <string name="action_settings">Settings</string>
+    <string name="view_journal">View Journal</string>
+    <string name="new_feed">New Feed Entry</string>
+    <string name="new_nap">New Nap Entry</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog_feed">You will lose this journal entry.  Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty">No journal entries yet!</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-8040512079233964/7508760539</string>
+    <string name="title_activity_journal">Journal Entries</string>
+    <string name="title_activity_feed">New Feed Entry</string>
+    <string name="title_activity_nap">New Nap Entry</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="journal_description">These are your journal entries</string>
+    <string name="ad">Check out this ad</string>
+    <string name="nap_message">It\'s nap time!</string>
+    <string name="feed_message">It\'s feeding time!</string>
+</resources>
